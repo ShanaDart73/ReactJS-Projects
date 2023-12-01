@@ -4,7 +4,9 @@ function App() {
   return (
       <div className="container">
           <header>
-              <h1>React.JS</h1>
+              <div className="hero">
+                  <h1>React.JS</h1>
+              </div>
           </header>
 
           <div className="content">
