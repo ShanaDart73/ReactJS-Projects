@@ -12,33 +12,68 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
   color: antiquewhite;
   font-size: x-large;
   background-color: black;
 }
 
-/***********************  HEADER STYLE ********************************/
+/*****************  HEADER STYLE START  *****************/
 header {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
   position: relative;
-  padding: 50px 0;
+  height: 130px;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+@media screen and (min-width: 500px) {
+  header {
+    padding: 140px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 155px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 170px;
+  }
 }
 
 .hero {
+  position: absolute;
+  transform-style: preserve-3d;
+  padding: 1em;
   color: #eac9c9;
   font-size: 30px;
   line-height: 1em;
   text-shadow: 0 0 0 rgb(238, 205, 205), 1px -1px 0 rgb(66, 36, 38), 2px -2px 0 rgb(229, 158, 161), 3px -3px 0 rgb(66, 36, 38), 4px -4px 0 rgb(145, 78, 81), 5px -5px 0 rgb(133, 66, 69), 6px -6px 0 rgb(120, 53, 56), 7px -7px 0 rgb(108, 41, 44), 8px -8px 0 rgb(96, 29, 32), 9px -9px 0 rgb(83, 16, 19), 10px -10px 0 rgb(71, 4, 7), 11px -11px 0 rgb(59, 0, 0), 12px -12px 11px rgba(0, 0, 0, 0.55), 12px -12px 1px rgba(0, 0, 0, 0.5), 0px 0px 11px rgba(0, 0, 0, 0.2);
-  padding: 20px;
   filter: drop-shadow(1px 8px 10px #e59ea1);
   transform: skew(10deg, 10deg) scaleY(1.33333);
   text-transform: uppercase;
 }
+@media screen and (min-width: 500px) {
+  .hero {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    font-size: 60px;
+  }
+}
 
 /***********************  HEADER STYLE END  ****************************/
-/***********************  CONTENT STYLE ********************************/
+/***********************  CONTENT STYLE START  ************************/
 .content {
   display: flex;
   flex-flow: column nowrap;
@@ -52,7 +87,43 @@ section {
   justify-content: center;
 }
 
+.one {
+  background-image: url("https://source.unsplash.com/1920x1080?spring");
+}
+
+.two {
+  background-image: url("https://source.unsplash.com/1920x1080?countryside");
+}
+
+.three {
+  background-image: url("https://source.unsplash.com/1920x1080?wild");
+}
+
+.four {
+  background-image: url("https://source.unsplash.com/1920x1080?mountain");
+}
+
 /***********************  CONTENT STYLE END  ****************************/
-/***********************  FOOTER STYLE ********************************/
+/***********************  FOOTER STYLE START  ***************************/
+footer {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em 0;
+}
+@media screen and (min-width: 500px) {
+  footer {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 500px) {
+  footer {
+    padding: 1.2em 0;
+  }
+}
 
 /*# sourceMappingURL=home_style.css.map */

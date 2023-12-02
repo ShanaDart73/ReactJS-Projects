@@ -10,16 +10,16 @@ function App() {
           </header>
 
           <div className="content">
-              <section>
+              <section className="one">
                   <div>Prime Number</div>
               </section>
-              <section>
+              <section className="two">
                   <div>Factorial</div>
               </section>
-              <section>
+              <section className="three">
                   <div>Random Number</div>
               </section>
-              <section>
+              <section className="four">
                   <div>ASCII Value</div>
               </section>
           </div>

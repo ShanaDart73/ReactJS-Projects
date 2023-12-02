@@ -10,44 +10,67 @@ body {
 
 /***********************  VARIABLES  ********************************/
 
+@mixin device_font_size($device-size, $font-size) {
+  @media screen and (min-width: $device-size) {
+    font-size: $font-size;
+  }
+}
+
+@mixin device_size_padding($device-size, $padding) {
+  @media screen and (min-width: $device-size) {
+    padding: $padding;
+  }
+}
+
 
 /*** CONTAINER ***/
 .container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
   color: antiquewhite;
   font-size: x-large;
   background-color: black;
 }
 
-/***********************  HEADER STYLE ********************************/
+/*****************  HEADER STYLE START  *****************/
 
 header {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-
   position: relative;
-  padding: 50px 0;
+  height: 130px;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+
+  @include device_size_padding(500px, 140px);
+  @include device_size_padding(768px, 155px);
+  @include device_size_padding(1024px, 170px);
 }
 
 .hero {
+  position: absolute;
+  transform-style: preserve-3d;
+  padding: 1em;
   color: #eac9c9;
   font-size: 30px;
   line-height:1em;
   text-shadow: 0 0 0 rgb(238, 205, 205),1px -1px 0 rgb(66, 36, 38),2px -2px 0 rgb(229, 158, 161),3px -3px 0 rgb(66, 36, 38),4px -4px 0 rgb(145,78,81),5px -5px 0 rgb(133,66,69),6px -6px 0 rgb(120,53,56),7px -7px 0 rgb(108,41,44),8px -8px 0 rgb(96,29,32),9px -9px 0 rgb(83,16,19),10px -10px 0 rgb(71,4,7), 11px -11px 0 rgb(59,-8,-5),12px -12px 11px rgba(0,0,0,0.55),12px -12px 1px rgba(0,0,0,0.5),0px 0px 11px rgba(0,0,0,.2);
 
-  padding: 20px;
   filter: drop-shadow(1px 8px 10px #e59ea1);
   transform: skew(10deg, 10deg) scaleY(1.33333);
   text-transform: uppercase;
-}
 
+  @include device_font_size(500px, 40px);
+  @include device_font_size(768px, 50px);
+  @include device_font_size(1024px, 60px);
+}
 /***********************  HEADER STYLE END  ****************************/
 
 
-/***********************  CONTENT STYLE ********************************/
+/***********************  CONTENT STYLE START  ************************/
 .content {
   display: flex;
   flex-flow: column nowrap;
@@ -61,7 +84,29 @@ section {
   justify-content: center;
 }
 
+.one {
+  background-image: url("https://source.unsplash.com/1920x1080?spring");
+}
+.two {
+  background-image: url("https://source.unsplash.com/1920x1080?countryside");
+}
+.three {
+  background-image: url("https://source.unsplash.com/1920x1080?wild");
+}
+.four {
+  background-image: url("https://source.unsplash.com/1920x1080?mountain");
+}
 /***********************  CONTENT STYLE END  ****************************/
 
 
-/***********************  FOOTER STYLE ********************************/
+/***********************  FOOTER STYLE START  ***************************/
+
+footer {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em 0;
+
+  @include device_font_size(500px, 1.8em);
+  @include device_font_size(768px, 2em);
+  @include device_size_padding(500px, 1.2em 0);
+}
