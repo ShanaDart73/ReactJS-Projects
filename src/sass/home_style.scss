@@ -10,6 +10,8 @@ body {
 
 /***********************  VARIABLES  ********************************/
 
+$text_font_size: 1em;
+
 @mixin device_font_size($device-size, $font-size) {
   @media screen and (min-width: $device-size) {
     font-size: $font-size;
@@ -22,19 +24,24 @@ body {
   }
 }
 
-
 /*** CONTAINER ***/
+
 .container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
   color: antiquewhite;
   font-size: x-large;
   background-color: black;
 }
 
-/*****************  HEADER STYLE START  *****************/
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/*****************  HEADER STYLE  *****************/
 
 header {
   position: relative;
@@ -43,11 +50,13 @@ header {
   flex-flow: nowrap column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
+  padding: 5em;
 
-  @include device_size_padding(500px, 140px);
-  @include device_size_padding(768px, 155px);
-  @include device_size_padding(1024px, 170px);
+  scroll-snap-align: start;
+
+  @include device_size_padding(500px, 6em);
+  @include device_size_padding(768px, 7em);
+  @include device_size_padding(1024px, 8em);
 }
 
 .hero {
@@ -67,21 +76,16 @@ header {
   @include device_font_size(768px, 50px);
   @include device_font_size(1024px, 60px);
 }
-/***********************  HEADER STYLE END  ****************************/
 
-
-/***********************  CONTENT STYLE START  ************************/
-.content {
-  display: flex;
-  flex-flow: column nowrap;
-}
+/***********************  CONTENT STYLE  *********************/
 
 section {
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  scroll-snap-align: start;
 }
 
 .one {
@@ -96,15 +100,41 @@ section {
 .four {
   background-image: url("https://source.unsplash.com/1920x1080?mountain");
 }
-/***********************  CONTENT STYLE END  ****************************/
+
+.text {
+  height: 100vh;
+  font-size: $text_font_size;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  @include device_font_size(500px, 1.5em);
+  @include device_font_size(768px, 2em);
+  @include device_font_size(1024px, 2.5em);
+
+  h2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: 50vh;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 
 
-/***********************  FOOTER STYLE START  ***************************/
+/***********************  FOOTER STYLE  ***********************/
 
 footer {
   font-size: 1.5em;
   text-align: center;
   padding: 1em 0;
+
+  scroll-snap-align: start;
 
   @include device_font_size(500px, 1.8em);
   @include device_font_size(768px, 2em);

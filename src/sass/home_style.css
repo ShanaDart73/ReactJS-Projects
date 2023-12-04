@@ -9,16 +9,20 @@ body {
 /***********************  VARIABLES  ********************************/
 /*** CONTAINER ***/
 .container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
   color: antiquewhite;
   font-size: x-large;
   background-color: black;
 }
 
-/*****************  HEADER STYLE START  *****************/
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/*****************  HEADER STYLE  *****************/
 header {
   position: relative;
   height: 130px;
@@ -26,21 +30,22 @@ header {
   flex-flow: nowrap column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
+  padding: 5em;
+  scroll-snap-align: start;
 }
 @media screen and (min-width: 500px) {
   header {
-    padding: 140px;
+    padding: 6em;
   }
 }
 @media screen and (min-width: 768px) {
   header {
-    padding: 155px;
+    padding: 7em;
   }
 }
 @media screen and (min-width: 1024px) {
   header {
-    padding: 170px;
+    padding: 8em;
   }
 }
 
@@ -72,19 +77,13 @@ header {
   }
 }
 
-/***********************  HEADER STYLE END  ****************************/
-/***********************  CONTENT STYLE START  ************************/
-.content {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
+/***********************  CONTENT STYLE  *********************/
 section {
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  scroll-snap-align: start;
 }
 
 .one {
@@ -103,12 +102,45 @@ section {
   background-image: url("https://source.unsplash.com/1920x1080?mountain");
 }
 
-/***********************  CONTENT STYLE END  ****************************/
-/***********************  FOOTER STYLE START  ***************************/
+.text {
+  height: 100vh;
+  font-size: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+@media screen and (min-width: 500px) {
+  .text {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text {
+    font-size: 2.5em;
+  }
+}
+.text h2 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 50vh;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/***********************  FOOTER STYLE  ***********************/
 footer {
   font-size: 1.5em;
   text-align: center;
   padding: 1em 0;
+  scroll-snap-align: start;
 }
 @media screen and (min-width: 500px) {
   footer {
