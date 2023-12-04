@@ -5,9 +5,7 @@ function App() {
       <div className="container">
           <div className="content">
               <header>
-                  <div className="hero">
-                      <h1>React.JS</h1>
-                  </div>
+                  <div className="hero"><h1>React.JS</h1></div>
               </header>
               <section className="one">
                   <div className="text"><h2>Prime Number</h2></div>
