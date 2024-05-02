@@ -123,9 +123,14 @@ section {
     height: 50vh;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
   }
 }
 
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
 
 /***********************  FOOTER STYLE  ***********************/
 
