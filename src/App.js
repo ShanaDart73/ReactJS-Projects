@@ -1,10 +1,10 @@
 import './sass/home_style.css'
-import {Home } from './Home'
+import {Homepage } from './Homepage'
 import { ShoppingList } from './ShoppingList'
 import { Factorial } from './Factorial'
 import { PrimeNumber } from './PrimeNumber'
 import { RandomNumber } from './RandomNumber'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -17,33 +17,12 @@ function App() {
                   </header>
 
                   <Routes>
-                      <Route path="/" element={<Home/>} />
+                      <Route path="/" element={<Homepage/>} />
                       <Route path="/ShoppingList" element={<ShoppingList/>} />
                       <Route path="/Factorial" element={<Factorial/>} />
                       <Route path="/PrimeNumber" element={<PrimeNumber/>} />
                       <Route path="/RandomNumber" element={<RandomNumber/>} />
                   </Routes>
-
-                  <section className="one">
-                      <div className="text">
-                          <Link to="/Shoppinglist"><h2>Shopping List</h2></Link>
-                      </div>
-                  </section>
-                  <section className="two">
-                      <div className="text">
-                          <Link to="/Factorial"><h2>Factorial</h2></Link>
-                      </div>
-                  </section>
-                  <section className="three">
-                      <div className="text">
-                          <Link to="/PrimeNumber"><h2>Prime Number</h2></Link>
-                      </div>
-                  </section>
-                  <section className="four">
-                      <div className="text">
-                          <Link to="/RandomNumber"><h2>Random Number</h2></Link>
-                      </div>
-                  </section>
 
                   <footer>
                       <p>React.JS Projects</p>
