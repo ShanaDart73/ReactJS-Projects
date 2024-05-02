@@ -1,15 +1,15 @@
 import './sass/home_style.css'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home'
-import ShoppingList from './pages/ShoppingList'
-import Factorial from './pages/Factorial'
-import PrimeNumber from './pages/PrimeNumber'
-import RandomNumber from './pages/RandomNumber'
+import {Home } from './Home'
+import { ShoppingList } from './ShoppingList'
+import { Factorial } from './Factorial'
+import { PrimeNumber } from './PrimeNumber'
+import { RandomNumber } from './RandomNumber'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
 
   return (
-      <Router>
+      <BrowserRouter>
           <div className="container">
               <div className="content">
                   <header>
@@ -36,20 +36,21 @@ function App() {
                   </section>
                   <section className="three">
                       <div className="text">
-                          <Link to="/PrimeNumber"><h2>Random Number</h2></Link>
+                          <Link to="/PrimeNumber"><h2>Prime Number</h2></Link>
                       </div>
                   </section>
                   <section className="four">
                       <div className="text">
-                          <Link to="/RandomNumber"><h2>Prime Number</h2></Link>
+                          <Link to="/RandomNumber"><h2>Random Number</h2></Link>
                       </div>
                   </section>
+
                   <footer>
                       <p>React.JS Projects</p>
                   </footer>
               </div>
           </div>
-      </Router>
+      </BrowserRouter>
   );
 }
 
