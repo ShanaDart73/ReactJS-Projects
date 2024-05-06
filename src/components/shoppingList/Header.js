@@ -1,8 +1,14 @@
+import '../../sass/shoppingList_style.css'
 
-const Header = () => {
+const Header = ({ title }) => {
     return (
-        <h1>Shopping List</h1>
+        <div className="header">
+            <p>{title}</p>
+        </div>
     )
 }
 
+Header.defaultProps = {
+    title: "List"
+}
 export default Header

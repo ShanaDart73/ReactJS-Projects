@@ -1,9 +1,12 @@
+import '../../sass/shoppingList_style.css'
 
 const Footer = () => {
     const today = new Date()
 
     return (
-        <p>Copyright &copy; {today.getFullYear()}</p>
+        <div className="footer">
+            <p>Copyright &copy; {today.getFullYear()}</p>
+        </div>
     )
 }
 
