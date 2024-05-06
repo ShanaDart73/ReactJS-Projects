@@ -6,6 +6,12 @@
   background-color: rgba(59, 27, 54, 0.99);
 }
 
+.icon svg {
+  width: 40px;
+  height: 40px;
+  color: #e59ea1;
+}
+
 * .header {
   width: 100%;
   padding: 0 0.25rem 2rem;
@@ -62,7 +68,6 @@ ul li::before {
   cursor: pointer;
   margin-right: 0.9rem;
   outline: 3px solid rgba(238, 130, 238, 0.5);
-  background-color: transparent;
 }
 
 .item input[type=checkbox]:focus + label {
@@ -74,10 +79,10 @@ ul li::before {
 }
 
 .item svg {
-  width: 48px;
-  min-width: 48px;
-  height: 48px;
-  min-height: 48px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
   font-size: 1rem;
   color: rgba(84, 168, 250, 0.5);
   cursor: pointer;
@@ -87,6 +92,72 @@ ul li::before {
 .item svg:hover {
   color: rgba(255, 0, 0, 0.3);
   outline: none;
+}
+
+.addForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem 0 0;
+  border-bottom: 1px solid rgba(67, 57, 86, 0.75);
+}
+
+.addForm input[type=text] {
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-height: 48px;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(142, 177, 191, 0.85);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(67, 57, 86, 0.75);
+  border: none;
+  cursor: pointer;
+}
+
+button > svg {
+  width: 48px;
+  height: 48px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  color: rgba(206, 167, 232, 0.65);
+  background-color: rgba(67, 57, 86, 0.75);
+}
+
+button svg:focus,
+button svg:hover {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(207, 164, 246, 0.5);
+  outline: none;
+}
+
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.15rem 0;
+  padding: 0 0 0;
+}
+
+.searchForm input[type=text] {
+  flex-grow: 1;
+  max-width: 100%;
+  min-height: 48px;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  outline: none;
+  background-color: rgba(142, 177, 191, 0.85);
 }
 
 * .footer {

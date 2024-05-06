@@ -1,4 +1,3 @@
-import '../../sass/shoppingList_style.css'
 import { ImBin2 } from "react-icons/im"
 
 const Content = ({ items, handleChecked, handleDelete }) => {
@@ -17,12 +16,13 @@ const Content = ({ items, handleChecked, handleDelete }) => {
                             <label
                                 style={(item.checked) ? { textDecoration: "line-through" } : null}
                             >
-                                {item.id} - {item.item}
+                                {item.item}
                             </label>
                             <ImBin2
                                 onClick={() => handleDelete(item.id)}
                                 role="button"
                                 tabIndex="0"
+                                aria-label={`Delete ${item.item}`}
                             />
                         </li>
                     ))}

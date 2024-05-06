@@ -1,11 +1,10 @@
 import '../../sass/shoppingList_style.css'
 
-const Footer = () => {
-    const today = new Date()
+const Footer = ({ length }) => {
 
     return (
         <div className="footer">
-            <p>Copyright &copy; {today.getFullYear()}</p>
+            <p>{length} {length === 1 ? "item" : "items"}</p>
         </div>
     )
 }
