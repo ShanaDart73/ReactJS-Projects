@@ -12,14 +12,41 @@
   color: #e59ea1;
 }
 
-* .header {
-  width: 100%;
-  padding: 0 0.25rem 2rem;
-  background-color: rgba(59, 27, 54, 0.99);
-  color: rgba(250, 235, 215, 0.51);
-  font-size: 2em;
+.wrapper {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: rgba(67, 57, 86, 0.64);
+  box-sizing: border-box;
+}
+
+.appContainer {
+  height: 100vh;
+  min-width: 375px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+@media screen and (min-width: 500px) {
+  .appContainer {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .appContainer {
+    width: 500px;
+  }
+}
+
+* .header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: rgba(250, 235, 215, 0.51);
+  font-size: 2em;
+  padding: 0 0.25rem 2rem;
+  background: linear-gradient(0deg, rgba(98, 34, 195, 0.46) 0%, rgb(59, 27, 54) 100%);
 }
 
 * .main {
@@ -161,13 +188,13 @@ button svg:hover {
 }
 
 * .footer {
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 0.5rem 0.25rem;
-  background-color: rgba(59, 27, 54, 0.99);
   color: rgba(250, 235, 215, 0.51);
   font-size: 1em;
-  display: grid;
-  place-content: center;
+  background: linear-gradient(0deg, rgb(59, 27, 54) 0%, rgba(98, 34, 195, 0.96) 100%);
 }
 
 /*# sourceMappingURL=shoppingList_style.css.map */

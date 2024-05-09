@@ -47,26 +47,29 @@ export const ShoppingList = () => {
     }
 
     return (
-        <>
-            <Link to="/" className="icon">
-                <div ><IoHomeSharp /></div>
-            </Link>
-            <Header title="Shopping List" />
-            <AddItem
-                addItem={addItem}
-                setAddItem={setAddItem}
-                handleSubmit={handleSubmit}
-            />
-            <SearchItem
-                search={search}
-                setSearch={setSearch}
-            />
-            <Content
-                items={items.filter((item) => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
-                handleChecked={handleChecked}
-                handleDelete={handleDelete}
-            />
-            <Footer length={items.length} />
-        </>
+        <div className="wrapper">
+            <div className="appContainer">
+                <Link to="/" className="icon">
+                    <div ><IoHomeSharp /></div>
+                </Link>
+                <Header title="Shopping List" />
+                <AddItem
+                    addItem={addItem}
+                    setAddItem={setAddItem}
+                    handleSubmit={handleSubmit}
+                />
+                <SearchItem
+                    search={search}
+                    setSearch={setSearch}
+                />
+                <Content
+                    items={items.filter((item) => ((item.item).toLowerCase())
+                        .includes(search.toLowerCase()))}
+                    handleChecked={handleChecked}
+                    handleDelete={handleDelete}
+                />
+                <Footer length={items.length} />
+            </div>
+        </div>
     )
 }
