@@ -50,7 +50,7 @@ export const ShoppingList = () => {
         <div className="wrapper">
             <div className="appContainer">
                 <Link to="/" className="icon">
-                    <div ><IoHomeSharp /></div>
+                    <div><IoHomeSharp /></div>
                 </Link>
                 <Header title="Shopping List" />
                 <AddItem

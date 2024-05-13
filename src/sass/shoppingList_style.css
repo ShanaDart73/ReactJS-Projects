@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .icon {
-  width: 100%;
+  width: 102%;
   display: flex;
   justify-content: flex-end;
   background-color: rgba(59, 27, 54, 0.99);
@@ -22,11 +22,14 @@
 }
 
 .appContainer {
-  height: 100vh;
+  height: 97vh;
   min-width: 375px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
+  border-right: 7px solid rgba(32, 7, 68, 0.4588235294);
+  border-left: 7px solid rgba(32, 7, 68, 0.4588235294);
 }
 @media screen and (min-width: 500px) {
   .appContainer {
@@ -46,14 +49,14 @@
   color: rgba(250, 235, 215, 0.51);
   font-size: 2em;
   padding: 0 0.25rem 2rem;
-  background: linear-gradient(0deg, rgba(98, 34, 195, 0.46) 0%, rgb(59, 27, 54) 100%);
+  background: linear-gradient(0deg, rgba(32, 7, 68, 0.46) 0%, rgb(59, 27, 54) 100%);
 }
 
 * .main {
   width: 100%;
   color: rgba(250, 235, 215, 0.51);
   font-size: 1.1em;
-  background-color: rgba(67, 57, 86, 0.64);
+  background-color: rgba(32, 7, 68, 0.4588235294);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -78,7 +81,7 @@ ul li::before {
   align-items: center;
   padding: 0.5rem 0 0.5rem 0.5rem;
   margin: 0.25rem 0;
-  background-color: rgba(67, 57, 86, 0.75);
+  background-color: rgba(67, 57, 86, 0.2);
 }
 
 .item:first-child {
@@ -86,7 +89,7 @@ ul li::before {
 }
 
 .item input[type=checkbox] {
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   width: 48px;
   min-width: 48px;
@@ -127,7 +130,7 @@ ul li::before {
   justify-content: space-between;
   align-items: center;
   padding: 0 0.5rem 0 0;
-  border-bottom: 1px solid rgba(67, 57, 86, 0.75);
+  border-bottom: 1px solid rgba(67, 57, 86, 0.67);
 }
 
 .addForm input[type=text] {
@@ -137,18 +140,20 @@ ul li::before {
   font-size: 1.5rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
+  border: 1px solid rgba(229, 158, 161, 0.45);
   margin-right: 0.25rem;
   outline: none;
-  color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(142, 177, 191, 0.85);
+  color: rgba(250, 235, 215, 0.7);
+  background-color: rgba(1, 1, 51, 0.99);
 }
 
 button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(67, 57, 86, 0.75);
-  border: none;
+  background-color: rgba(53, 2, 54, 0.98);
+  border: 1px solid rgba(250, 235, 215, 0.5);
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
@@ -164,7 +169,7 @@ button > svg {
 button svg:focus,
 button svg:hover {
   color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(207, 164, 246, 0.5);
+  background-color: rgba(186, 169, 217, 0.58);
   outline: none;
 }
 
@@ -183,8 +188,10 @@ button svg:hover {
   font-size: 1.5rem;
   padding: 0.25rem;
   border-radius: 0.25rem;
+  border: 1px solid rgba(229, 158, 161, 0.45);
   outline: none;
-  background-color: rgba(142, 177, 191, 0.85);
+  color: rgba(250, 235, 215, 0.7);
+  background-color: rgba(1, 1, 51, 0.99);
 }
 
 * .footer {
@@ -194,7 +201,7 @@ button svg:hover {
   padding: 0.5rem 0.25rem;
   color: rgba(250, 235, 215, 0.51);
   font-size: 1em;
-  background: linear-gradient(0deg, rgb(59, 27, 54) 0%, rgba(98, 34, 195, 0.96) 100%);
+  background: linear-gradient(0deg, rgb(59, 27, 54) 0%, rgba(32, 7, 68, 0.46) 100%);
 }
 
 /*# sourceMappingURL=shoppingList_style.css.map */
