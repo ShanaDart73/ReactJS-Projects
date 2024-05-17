@@ -148,10 +148,15 @@ ul li::before {
   padding: 0.25rem;
   border-radius: 0.25rem;
   border: 1px solid rgba(229, 158, 161, 0.45);
-  margin-right: 0.25rem;
+  margin: 0 0.25rem;
   outline: none;
   color: rgba(250, 235, 215, 0.7);
   background-color: rgba(1, 1, 51, 0.99);
+}
+
+.addForm label {
+  position: absolute;
+  left: -99999px;
 }
 
 button {
@@ -199,6 +204,11 @@ button svg:hover {
   outline: none;
   color: rgba(250, 235, 215, 0.7);
   background-color: rgba(1, 1, 51, 0.99);
+}
+
+.searchForm label {
+  position: absolute;
+  left: -99999px;
 }
 
 */*********************** FOOTER **********************/

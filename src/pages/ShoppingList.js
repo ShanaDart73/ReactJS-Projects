@@ -1,5 +1,5 @@
 import '../sass/shoppingList_style.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { IoHomeSharp } from 'react-icons/io5'
 import Header from '../components/shoppingList/Header'
@@ -9,34 +9,33 @@ import Content from '../components/shoppingList/Content'
 import Footer from '../components/shoppingList/Footer'
 
 export const ShoppingList = () => {
-    const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')))
+    const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')) || [])
 
     const [addItem, setAddItem] = useState('')
 
     const [search, setSearch] = useState('')
 
-    const setAndSaveItems = (newItems) => {
-        setItems(newItems)
-        localStorage.setItem('shoppinglist', JSON.stringify(newItems))
-    }
+    useEffect(() => {
+        localStorage.setItem('shoppinglist', JSON.stringify(items))
+    }, [items])
 
     const addNewItem = (item) => {
         const id = items.length ? items[items.length - 1].id + 1 : 1
         const newItem = { id, checked: false, item }
         const listItems = [...items, newItem]
-        setAndSaveItems(listItems)
+        setItems(listItems)
     }
 
     const handleChecked = (id) => {
         const listItems = items.map((item) => item.id === id ? {
             ...item, checked: !item.checked
         } : item)
-        setAndSaveItems(listItems)
+        setItems(listItems)
     }
 
     const handleDelete = (id) => {
         const listItems = items.filter((item) => item.id !== id)
-        setAndSaveItems(listItems)
+        setItems(listItems)
     }
 
     const handleSubmit = (e) => {
