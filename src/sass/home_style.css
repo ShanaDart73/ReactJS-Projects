@@ -87,19 +87,23 @@ section {
 }
 
 .one {
-  background-image: url("https://source.unsplash.com/1920x1080?spring");
+  background-image: url("https://images.unsplash.com/photo-1602953589577-a7e91286f5ac?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
 }
 
 .two {
-  background-image: url("https://source.unsplash.com/1920x1080?countryside");
+  background-image: url("https://images.unsplash.com/photo-1607722588397-ff51074a891f?q=80&w=2773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
 }
 
 .three {
-  background-image: url("https://source.unsplash.com/1920x1080?wild");
+  background-image: url("https://images.unsplash.com/photo-1531943865082-287018833410?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
 }
 
 .four {
-  background-image: url("https://source.unsplash.com/1920x1080?mountain");
+  background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
 }
 
 .text {
