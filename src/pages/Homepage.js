@@ -13,7 +13,7 @@ export const Homepage = () => {
             </section>
             <section className="two">
                 <div className="text">
-                    <Link to="/Factorial"><h2>Factorial</h2></Link>
+                    <Link to="/TicTacToe"><h2>Tic-Tac-Toe Game</h2></Link>
                 </div>
             </section>
             <section className="three">

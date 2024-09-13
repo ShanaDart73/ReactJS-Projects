@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 
-export const Factorial = () => {
+export const TicTacToe = () => {
     return (
         <>
             <Link to="/">Homepage</Link>
-            <h1>Factorial</h1>
+            <h1>Tic-Tac-Toe Game</h1>
         </>
     )
 }

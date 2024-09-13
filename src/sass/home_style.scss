@@ -123,9 +123,10 @@ section {
 
   h2 {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     width: 80vw;
     height: 50vh;
