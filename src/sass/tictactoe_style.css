@@ -1,27 +1,64 @@
+.content {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: peachpuff;
+}
+
+.home-icon {
+  color: #3b0000;
+  padding: 5px;
+}
+
+.home-icon svg {
+  width: 10%;
+  height: 10%;
+}
+@media screen and (min-width: 1024px) {
+  .home-icon svg {
+    width: 5%;
+    height: 5%;
+  }
+}
+
+.table {
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  color: #3b0000;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
 .square {
   background: transparent;
-  border: 1px solid #999;
-  float: left;
-  color: antiquewhite;
-  font-size: 24px;
+  border: 1px solid #3b0000;
+  color: #3b0000;
+  font-size: 1.5em;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 68px;
+  height: 68px;
 }
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
+@media screen and (min-width: 768px) {
+  .square {
+    width: 136px;
+    height: 136px;
+    font-size: 3em;
+  }
 }
 
 /*# sourceMappingURL=tictactoe_style.css.map */
