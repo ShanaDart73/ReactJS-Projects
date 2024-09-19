@@ -1,0 +1,78 @@
+
+@mixin device_size($device_size, $width, $height) {
+  @media screen and (min-width: $device_size) {
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin square_size($device_size, $width, $height, $fontSize) {
+  @media screen and (min-width: $device_size) {
+    width: $width;
+    height: $height;
+    font-size: $fontSize;
+  }
+}
+
+.content {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: peachpuff;
+}
+.home-icon {
+  color: #3b0000;
+  padding: 5px;
+}
+
+.home-icon svg {
+  width: 10%;
+  height: 10%;
+
+  @include device_size(768px, 7%, 7%);
+  @include device_size(1024px, 5%, 5%);
+}
+
+.table {
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  color: #3b0000;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  background: transparent;
+  border: 1px solid #3b0000;
+  color: #3b0000;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 34px;
+
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 68px;
+  height: 68px;
+
+  @include square_size(768px, 136px, 136px, 3em);
+}
+.restart {
+  font-size: 1em;
+  border: 1px solid #3b0000;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: .5em;
+  background-color: transparent;
+}
