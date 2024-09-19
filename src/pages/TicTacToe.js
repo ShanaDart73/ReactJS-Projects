@@ -21,11 +21,20 @@ export const TicTacToe = () => {
         setXIsNext(!xIsNext)
     }
     const winner = calculateWinner(squares)
-    let status;
+    const draw = checkDraw(squares)
+    let status
+
     if (winner) {
         status = "Winner: " + winner
+    } else if (draw) {
+        status = "It's a Draw"
     } else {
         status = "Next player: " + (xIsNext ? "X" : "O")
+    }
+
+    function handleRestart() {
+        setSquares(Array(9).fill(null))
+        setXIsNext(true);
     }
 
     return (
@@ -51,6 +60,9 @@ export const TicTacToe = () => {
                     <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
                     <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
                 </div>
+                <button className="restart" onClick={handleRestart}>
+                    Restart
+                </button>
             </div>
         </div>
     )
@@ -80,4 +92,8 @@ function calculateWinner(squares) {
         }
     }
     return null
+}
+
+function checkDraw(squares) {
+    return squares.every(square => square !== null) && !calculateWinner(squares)
 }
