@@ -6,6 +6,12 @@
   }
 }
 
+@mixin board_size($device_size, $width) {
+  @media screen and (min-width: $device_size) {
+    width: $width;
+  }
+}
+
 @mixin square_size($device_size, $width, $height, $fontSize) {
   @media screen and (min-width: $device_size) {
     width: $width;
@@ -46,9 +52,13 @@
   margin-bottom: 10px;
 }
 
-.board-row {
+.board {
+  width: 210px;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+
+  @include board_size(768px, 420px);
 }
 
 .square {

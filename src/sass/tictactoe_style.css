@@ -40,9 +40,16 @@
   margin-bottom: 10px;
 }
 
-.board-row {
+.board {
+  width: 210px;
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .board {
+    width: 420px;
+  }
 }
 
 .square {
