@@ -7,8 +7,12 @@ export const TicTacToe = () => {
     const [xIsNext, setXIsNext] = useState(true)
     const [squares, setSquares] = useState(Array(9).fill(null))
 
+    const winnerInfo = calculateWinner(squares)
+    const winner = winnerInfo.winner
+    const winnerLine = winnerInfo.line
+
     function handleClick(i) {
-        if (squares[i] || calculateWinner(squares)) {
+        if (squares[i] || winner) {
             return
         }
         const nextSquares = squares.slice()
@@ -20,7 +24,7 @@ export const TicTacToe = () => {
         setSquares(nextSquares)
         setXIsNext(!xIsNext)
     }
-    const winner = calculateWinner(squares)
+
     const draw = checkDraw(squares)
     let status
 
@@ -50,8 +54,9 @@ export const TicTacToe = () => {
                         return (
                             <div key={index}>
                                 <Square
-                                    value={square}
+                                    value={squares[index]}
                                     onSquareClick={() => handleClick(index)}
+                                    highlight={winnerLine.includes(index)}
                                 />
                             </div>
                         )
@@ -65,9 +70,15 @@ export const TicTacToe = () => {
     )
 }
 
-function Square({ value, onSquareClick }) {
+function Square({ value, onSquareClick, highlight }) {
     return (
-        <button className="square" onClick={onSquareClick}>{value}</button>
+        <button
+            className="square"
+            onClick={onSquareClick}
+            style={{ backgroundColor: highlight ? 'rgba(247,134,96,0.5)' : 'transparent' }}
+        >
+            {value}
+        </button>
     )
 }
 
@@ -85,12 +96,12 @@ function calculateWinner(squares) {
     for (let i = 0; i <lines.length; i++) {
         const [a, b, c] = lines[i]
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return squares[a]
+            return { winner: squares[a], line: lines[i] }
         }
     }
-    return null
+    return { winner: null, line: [] }
 }
 
 function checkDraw(squares) {
-    return squares.every(square => square !== null) && !calculateWinner(squares)
+    return squares.every(square => square !== null) && !calculateWinner(squares).winner
 }
