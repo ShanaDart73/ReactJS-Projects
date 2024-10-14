@@ -1,0 +1,65 @@
+
+.content {
+  color: rgba(255, 228, 196, 0.75);
+  background-color: #02262f;
+}
+
+.home-logo {
+  color: rgba(255, 228, 196, 0.75);
+  padding: 5px;
+}
+
+.title {
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #02262f;
+  border-radius: .25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+  background-color: rgba(255, 228, 196, 0.75);
+  transform-style: preserve-3d;
+  height: 250px;
+  cursor: pointer;
+  transition: 15ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0));
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card:hover {
+  box-shadow: 0 0 5px 2px rgba(92, 236, 236, 0.85);
+}
+
+.card .card-front, .card .card-back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .card-back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-options {
+  margin-top: .5rem;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.option {
+  padding: 0.15rem;
+}

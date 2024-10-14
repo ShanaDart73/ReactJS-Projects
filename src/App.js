@@ -2,7 +2,7 @@ import './sass/home_style.css'
 import {Homepage } from './pages/Homepage'
 import { ShoppingList } from './pages/ShoppingList'
 import { TicTacToe } from './pages/TicTacToe'
-import { PrimeNumber } from './pages/PrimeNumber'
+import { Flashcard } from './pages/Flashcard'
 import { RandomNumber } from './pages/RandomNumber'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ function App() {
                       <Route path="/" element={<Homepage/>} />
                       <Route path="/ShoppingList" element={<ShoppingList/>} />
                       <Route path="/TicTacToe" element={<TicTacToe/>} />
-                      <Route path="/PrimeNumber" element={<PrimeNumber/>} />
+                      <Route path="/Flashcard" element={<Flashcard/>} />
                       <Route path="/RandomNumber" element={<RandomNumber/>} />
                   </Routes>
 

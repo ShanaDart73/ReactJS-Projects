@@ -18,7 +18,7 @@ export const Homepage = () => {
             </section>
             <section className="three">
                 <div className="text">
-                    <Link to="/PrimeNumber"><h2>Prime Number</h2></Link>
+                    <Link to="/Flashcard"><h2>Flashcard</h2></Link>
                 </div>
             </section>
             <section className="four">
