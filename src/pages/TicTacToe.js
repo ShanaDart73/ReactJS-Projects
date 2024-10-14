@@ -42,7 +42,7 @@ export const TicTacToe = () => {
     }
 
     return (
-        <div className="content">
+        <div className="content-tictactoe">
             <Link to="/">
                 <div className="home-icon"><IoHomeSharp /></div>
             </Link>
