@@ -18,7 +18,7 @@ export const Homepage = () => {
             </section>
             <section className="three">
                 <div className="text">
-                    <Link to="/Flashcard"><h2>Flashcard</h2></Link>
+                    <a href="/Flashcard"><h2>Flashcard</h2></a>
                 </div>
             </section>
             <section className="four">
